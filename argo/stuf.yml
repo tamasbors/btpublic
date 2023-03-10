@@ -4,9 +4,9 @@ kind: Secret
 metadata:
   name: app-secret
 data:
-  DB_host: bXly==
-  DB_User: ds49dsD==
-  DB_Password: ad4dsS
+  DB_host: "bXly=="
+  DB_User: "ds49dsD=="
+  DB_Password: "ad4dsS"
 ---
 kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
