@@ -1,12 +1,12 @@
 resource "kubernetes_pod" "nginx" {
   metadata {
-    name = "nginx"
+    name = "nginxooooooooooooooooo"
   }
 
   spec {
     container {
       image = "nginx:latest"
-      name  = "nginx"
+      name  = "ngisadasdasdanx"
       port {
         container_port = 80
       }
