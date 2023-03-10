@@ -36,6 +36,7 @@ spec:
   resources:
     requests:
       storage: 500Mi
+  storageClassName: slow
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -44,6 +45,8 @@ metadata:
 spec:
   accessModes:
     - ReadWriteMany
+  storageClassName: slow
+  persistentVolumeReclaimPolicy: Retain
   capacity:
     storage: 1Gi
   hostPath:
