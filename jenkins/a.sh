@@ -1,0 +1,5 @@
+#!/bin/bash
+
+whoami
+date
+ls -1
