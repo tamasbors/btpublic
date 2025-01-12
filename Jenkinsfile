@@ -8,18 +8,18 @@ pipeline {
         pollSCM '*/5 * * * *'
     }
     stages {
-        stage('Build') {
+        stage("build") {
             steps {
-                echo "Building.."
+                echo "building the application..."
                 sh '''
                 cd myapp
                 pip install -r requirements.txt
                 '''
             }
         }
-        stage('Test') {
+        stage("test") {
             steps {
-                echo "Testing.."
+                echo "testing the application..."
                 sh '''
                 cd myapp
                 python3 hello.py
@@ -27,12 +27,23 @@ pipeline {
                 '''
             }
         }
-        stage('Deliver') {
+        stage("deploy") {
             steps {
-                echo 'Deliver....'
+                echo 'deploying the applicaiton...'
                 sh '''
                 echo "doing delivery stuff.."
                 '''
+            }
+        }
+        post {
+            always {
+                //
+            }
+            success {
+                //
+            }
+            failure {
+                //
             }
         }
     }
