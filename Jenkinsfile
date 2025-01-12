@@ -14,7 +14,7 @@ pipeline {
         stage("build") {
             when {
                 expression {
-                    BRANCH_NAME == 'first_branch' && CODE_CHANGES == true
+                    BRANCH_NAME == 'first_branch'
                 }
             }
             steps {
@@ -61,12 +61,12 @@ pipeline {
         }
         success {
             sh '''
-            echo "runs always"
+            echo "runs on success"
             '''
         }
         failure {
             sh '''
-            echo "runs always"
+            echo "runs on failure"
             '''
         }
     }
