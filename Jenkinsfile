@@ -52,22 +52,22 @@ pipeline {
                 '''
             }
         }
-        post {
-            always {
-                sh '''
-                echo "runs always"
-                '''
-            }
-            success {
-                sh '''
-                echo "runs always"
-                '''
-            }
-            failure {
-                sh '''
-                echo "runs always"
-                '''
-            }
+    }
+    post {
+        always {
+            sh '''
+            echo "runs always"
+            '''
+        }
+        success {
+            sh '''
+            echo "runs always"
+            '''
+        }
+        failure {
+            sh '''
+            echo "runs always"
+            '''
         }
     }
 }
